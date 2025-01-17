@@ -130,7 +130,7 @@ void motor_output (int output, int high_low, int speed)
     if (speed >= 0 && speed <= 255)
     {
   //    analogWrite(motorPWM, speed,output);
-      analogWrite(output, speed);
+      analogWrite(motorPWM, speed);
     }
   }
 }
