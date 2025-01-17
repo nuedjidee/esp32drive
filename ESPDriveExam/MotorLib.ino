@@ -43,12 +43,12 @@ void example(){
   motor(4, RELEASE, 0);
   delay(100);
   }
-void analogWrite(int a,int b,int c){
-  ledcSetup(c,490,8);
-  ledcAttachPin(a, c);
-  ledcWrite(c, b);
- // delay(9);
-  }
+// void analogWrite(int a,int b,int c){
+//   ledcSetup(c,490,8);
+//   ledcAttachPin(a, c);
+//   ledcWrite(c, b);
+//  // delay(9);
+//   }
 void motor(int nMotor, int command, int speed)
 {
   int motorA, motorB;
@@ -129,7 +129,8 @@ void motor_output (int output, int high_low, int speed)
     // set PWM only if it is valid
     if (speed >= 0 && speed <= 255)
     {
-      analogWrite(motorPWM, speed,output);
+  //    analogWrite(motorPWM, speed,output);
+      analogWrite(output, speed);
     }
   }
 }
